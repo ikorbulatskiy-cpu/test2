@@ -1,4 +1,6 @@
 const express = require("express");
+const MessageStore = require("./messages");
+const messages = new MessageStore();
 const path = require("path");
 
 const app = express();
