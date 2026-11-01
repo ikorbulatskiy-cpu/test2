@@ -9,19 +9,37 @@ document.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch(`${API}/api/status`);
     const data = await response.json();
 
-    if (data.status === "online") {
-      loginStatus.textContent =
-        "Сервер ЧЁРТ AI подключён. Galaxy пока не подключена.";
-    }
+    loginStatus.textContent = data.status === "online"
+      ? "Сервер ЧЁРТ AI подключён."
+      : "Сервер недоступен.";
   } catch (error) {
-    loginStatus.textContent =
-      "Не удалось связаться с сервером ЧЁРТ AI.";
+    loginStatus.textContent = "Не удалось связаться с сервером.";
   }
 
   loginButton.addEventListener("click", () => {
     loginStatus.textContent =
       "Авторизация Galaxy ещё не настроена.";
-
     recoveryCode.value = "";
+  });
+
+  const testButton = document.createElement("button");
+  testButton.textContent = "Проверить сообщения";
+  testButton.style.marginTop = "12px";
+  document.querySelector(".app").appendChild(testButton);
+
+  testButton.addEventListener("click", async () => {
+    try {
+      const response = await fetch(`${API}/api/test-message`, {
+        method: "POST"
+      });
+
+      const result = await response.json();
+
+      loginStatus.textContent = result.status === "OK"
+        ? "Тестовое сообщение отправлено на сервер!"
+        : "Не удалось отправить сообщение.";
+    } catch (error) {
+      loginStatus.textContent = "Ошибка соединения с сервером.";
+    }
   });
 });
