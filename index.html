@@ -17,52 +17,34 @@
       <div class="status">● Интерфейс готов</div>
     </header>
 
-    <section class="panel" id="login">
+    <section class="panel">
       <h2>🔐 Вход на персонажа</h2>
-      <p>Введите код восстановления для входа в аккаунт</p>
-
-      <input
-        id="recoveryCode"
-        type="password"
-        placeholder="Код восстановления"
-        autocomplete="off"
-      >
-
-      <button id="loginButton">🚀 Войти на персонажа</button>
-      <p class="hint" id="loginStatus">
-        Подключение к Galaxy пока не настроено
-      </p>
+      <p>Авторизация Galaxy пока не подключена.</p>
+      <p class="hint" id="loginStatus">Проверяем сервер...</p>
     </section>
 
-    <section class="panel hidden" id="profile">
-      <h2>Мой персонаж</h2>
-
-      <div class="avatar">👤</div>
-      <h2 id="nickname">Ник персонажа</h2>
-      <p class="online">● Подключение не подтверждено</p>
-
-      <div class="info">
-        <span>Планета</span>
-        <strong id="planetName">Не выбрана</strong>
+    <section class="panel">
+      <h2>💬 Сообщения</h2>
+      <div id="messagesList">
+        <p class="hint">Сообщений пока нет.</p>
       </div>
-
-      <button id="logoutButton" class="secondary">
-        Выйти из кабинета
+      <button id="refreshMessages">🔄 Обновить сообщения</button>
+      <button id="testMessage" class="secondary">
+        Добавить тестовое сообщение
       </button>
+      <p class="hint" id="messageStatus">Ожидание проверки...</p>
     </section>
 
     <section class="panel">
       <h2>Управление ЧЁРТ AI</h2>
-
       <div class="tiles">
         <div class="tile">💬<br>Сообщения</div>
         <div class="tile">🤖<br>Автоответы</div>
         <div class="tile">🌍<br>Планеты</div>
         <div class="tile">⚙️<br>Настройки</div>
       </div>
-
       <p class="hint">
-        Функции подключения появятся после настройки серверной части.
+        Подключение к Galaxy ещё не настроено.
       </p>
     </section>
 
