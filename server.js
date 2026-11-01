@@ -1,6 +1,5 @@
 const express = require("express");
 const MessageStore = require("./messages");
-const GalaxyConnection = require("./galaxy");
 
 const messages = new MessageStore();
 const app = express();
@@ -9,13 +8,22 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static(__dirname));
 
-app.get("/api/messages", (req, res) => {
+app.get("/api/status", (req, res) => {
   res.json({
-    messages: messages.getAll()
+    name: "CHERT AI",
+    status: "online",
+    galaxyConnection: "not_configured",
+    version: "1.0.0"
   });
 });
 
-// ВСТАВИТЬ НОВЫЙ КОД ЗДЕСЬ
+app.get("/health", (req, res) => {
+  res.json({ status: "OK" });
+});
+
+app.get("/api/messages", (req, res) => {
+  res.json({ messages: messages.getAll() });
+});
 
 app.post("/api/test-message", (req, res) => {
   messages.add({
@@ -26,12 +34,6 @@ app.post("/api/test-message", (req, res) => {
   res.json({
     status: "OK",
     message: "Тестовое сообщение добавлено"
-  });
-});
-
-app.get("/api/messages", (req, res) => {
-  res.json({
-    messages: messages.getAll()
   });
 });
 
