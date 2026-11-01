@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090511">
+  <title>ЧЁРТ AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <header class="header">
+      <div class="crown">♛</div>
+      <h1>ЧЁРТ <span>AI</span></h1>
+      <p>GALAXY OF DATING · MINI BOT</p>
+      <div class="status">● Интерфейс готов</div>
+    </header>
+
+    <section class="panel" id="login">
+      <h2>🔐 Вход на персонажа</h2>
+      <p>Введите код восстановления для входа в аккаунт</p>
+
+      <input
+        id="recoveryCode"
+        type="password"
+        placeholder="Код восстановления"
+        autocomplete="off"
+      >
+
+      <button id="loginButton">🚀 Войти на персонажа</button>
+      <p class="hint" id="loginStatus">
+        Подключение к Galaxy пока не настроено
+      </p>
+    </section>
+
+    <section class="panel hidden" id="profile">
+      <h2>Мой персонаж</h2>
+
+      <div class="avatar">👤</div>
+      <h2 id="nickname">Ник персонажа</h2>
+      <p class="online">● Подключение не подтверждено</p>
+
+      <div class="info">
+        <span>Планета</span>
+        <strong id="planetName">Не выбрана</strong>
+      </div>
+
+      <button id="logoutButton" class="secondary">
+        Выйти из кабинета
+      </button>
+    </section>
+
+    <section class="panel">
+      <h2>Управление ЧЁРТ AI</h2>
+
+      <div class="tiles">
+        <div class="tile">💬<br>Сообщения</div>
+        <div class="tile">🤖<br>Автоответы</div>
+        <div class="tile">🌍<br>Планеты</div>
+        <div class="tile">⚙️<br>Настройки</div>
+      </div>
+
+      <p class="hint">
+        Функции подключения появятся после настройки серверной части.
+      </p>
+    </section>
+
+    <footer>ЧЁРТ AI · VERSION 1.0</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
