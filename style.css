@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 18px;
+  background:
+    radial-gradient(ellipse at top, #35105d 0%, #10091c 45%, #050409 100%);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 480px;
+  margin: 15px auto;
+}
+
+.header {
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.crown {
+  color: #bd66ff;
+  font-size: 55px;
+  text-shadow: 0 0 25px #a020ff;
+}
+
+h1 {
+  font-size: 43px;
+  margin: 5px;
+  text-shadow: 0 0 18px #9c35ff;
+}
+
+h1 span {
+  color: #bd65ff;
+}
+
+.header p {
+  color: #c8a5ed;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.status {
+  color: #a8ffbb;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+.panel {
+  background: linear-gradient(145deg, #1d102e, #0d0a17);
+  border: 1px solid #963dff;
+  border-radius: 20px;
+  padding: 22px;
+  margin: 18px 0;
+  box-shadow: 0 0 20px #7415ad33;
+}
+
+h2 {
+  color: #e2bdff;
+  font-size: 20px;
+}
+
+.panel p {
+  color: #bca9d1;
+  line-height: 1.5;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  margin: 15px 0;
+  border: 1px solid #7835bd;
+  border-radius: 12px;
+  background: #100b1c;
+  color: white;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #d09aff;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #7615df, #a42bff);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 18px #8d22ff66;
+}
+
+.secondary {
+  margin-top: 20px;
+  background: #321344;
+}
+
+.hint {
+  font-size: 12px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.avatar {
+  width: 105px;
+  height: 105px;
+  margin: 20px auto;
+  display: grid;
+  place-items: center;
+  border: 2px solid #b65aff;
+  border-radius: 22px;
+  background: #26123d;
+  font-size: 55px;
+  box-shadow: 0 0 25px #a020ff66;
+}
+
+.online {
+  color: #8cffad !important;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid #4a2865;
+  padding: 14px 0;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tile {
+  padding: 22px 8px;
+  text-align: center;
+  border: 1px solid #7130a8;
+  border-radius: 14px;
+  background: #170d25;
+  color: #dfbaff;
+  line-height: 2;
+}
+
+footer {
+  text-align: center;
+  color: #8969a5;
+  padding: 25px;
+  font-size: 12px;
+}
