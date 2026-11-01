@@ -9,17 +9,24 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static(__dirname));
 
-app.get("/api/status", (req, res) => {
+app.get("/api/messages", (req, res) => {
   res.json({
-    name: "CHERT AI",
-    status: "online",
-    galaxyConnection: "not_configured",
-    version: "1.0.0"
+    messages: messages.getAll()
   });
 });
 
-app.get("/health", (req, res) => {
-  res.json({ status: "OK" });
+// ВСТАВИТЬ НОВЫЙ КОД ЗДЕСЬ
+
+app.post("/api/test-message", (req, res) => {
+  messages.add({
+    sender: "ЧЁРТ AI",
+    text: "Тестовое сообщение работает!"
+  });
+
+  res.json({
+    status: "OK",
+    message: "Тестовое сообщение добавлено"
+  });
 });
 
 app.get("/api/messages", (req, res) => {
