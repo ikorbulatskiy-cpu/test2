@@ -17,7 +17,11 @@ app.get("/api/status", (req, res) => {
   });
 });
 
-app.get("/health", (req, res) => {
+app.get("/health", (req, res) => { app.get("/api/messages", (req, res) => {
+  res.json({
+    messages: messages.getAll()
+  });
+});
   res.json({
     status: "OK"
   });
