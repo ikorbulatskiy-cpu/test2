@@ -24,3 +24,12 @@ app.get("/health", (req, res) => {
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`CHERT AI started on port ${PORT}`);
 });
+const GalaxyConnection = require("./galaxy");
+
+app.get("/api/galaxy-module", (req, res) => {
+  res.json({
+    module: "loaded",
+    connection: "not_started",
+    message: "Модуль Galaxy загружен"
+  });
+});
